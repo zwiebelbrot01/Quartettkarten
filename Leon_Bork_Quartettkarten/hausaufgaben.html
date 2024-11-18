@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hausaufgaben</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Aufgaben</h1>
+    </header>
+
+    <main>
+        <section class="preview-section">
+            <div class="preview-container">
+                <img src="images/333.jpg" alt="Vorschau Wilde Tiere Quartett" class="preview-image">
+                <a href="index.html" id="wildtier-btn">
+                    Wilde-Tiere-Quartett <span class="arrow">➔</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Button-Click-Event: Weiterleitung zur Wildtier-Quartett-Seite
+        document.getElementById("wildtier-btn").addEventListener("click", function (event) {
+            event.preventDefault(); // Verhindert Standard-Anchor-Tag-Verhalten
+            window.location.href = "index.html"; // Link zur Wildtier-Quartett-Seite
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+:root {
+    --dark-color: #181818;
+    --background-color: rgb(246, 246, 235);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.card-number,
+.stat-icon,
+.stat-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: relative; /* Ermöglicht relative Verschiebung */
+    top: 1rem; /* Verschiebt die Überschrift nach unten */
+    left: 5rem; /* Verschiebt die Überschrift nach rechts */
+    text-align: left; /* Links ausrichten */
+    font-size: 1.4rem; /* Schriftgröße der Überschrift */
+    font-family: "Roboto", sans-serif;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.card-wrapper {
+    background-color: var(--dark-color);
+    padding: .8rem;
+    display: inline-block; /* Sicherstellen, dass die Karten in einer Reihe bleiben */
+    margin: 0; /* Entfernt zusätzlichen Abstand */
+    vertical-align: top; /* Korrektur bei unterschiedlichen Höhen von inline-block */
+    border-radius: 0.7rem; /* Abrunden der Ecken */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Box-Shadow hinzugefügt */
+}
+.card-wrapper:hover {
+    transform: scale(1.025); /* Vergrößert die Karte leicht */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Fügt einen Schatten hinzu */
+}
+.card-content {
+    display: grid;
+    width: 300px;
+    height: 450px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: var(--background-color);
+    border-radius: .7rem;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+.card-number {
+    background-color: green;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.card-title {
+    grid-column: span 3;
+    text-transform: uppercase;
+    padding-left: .5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.card-image {
+    object-position: 50%.5%;
+    grid-column: span 4;
+    grid-row: span 5;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-trivia {
+    grid-column: span 4;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    background-color: green;
+    padding: 0 0.5rem;
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.stat-icon {
+    background-color: burlywood;
+}
+
+.stat-icon img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* Zusätzliche Änderungen für Zeilenumbrüche zwischen inline-block-Karten */
+#wrapper {
+    font-size: 0; /* Entfernt unerwünschte Leerzeichen zwischen Karten */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Zentriert die Karten horizontal */
+    gap: 1rem; /* Abstand zwischen den Karten */
+    padding: 1rem;
+    margin-top: 3rem; /* Neuer Abstand oben, um alles nach unten zu verschieben */
+}
+
+.card-wrapper {
+    font-size: initial; /* Rücksetztung der Schriftgröße in Karten */
+}
+
+/* Neue Farbklassen */
+
+/* Gruppe A */
+.group-a .card-number,
+.group-a .card-trivia {
+    background-color: red; /* Rote Hintergrundfarbe für Gruppe A */
+}
+
+/* Gruppe B */
+.group-b .card-number,
+.group-b .card-trivia {
+    background-color: green; /* Grüne Hintergrundfarbe für Gruppe B */
+}
+
+/* Gruppe C */
+.group-c .card-number,
+.group-c .card-trivia {
+    background-color: yellow; /* Gelbe Hintergrundfarbe für Gruppe C */
+    color: black; /* Schwarzer Text für bessere Lesbarkeit */
+}
+/* Gruppe D */
+.group-d .card-number,
+.group-d .card-trivia {
+    background-color: cyan; /* Gelbe Hintergrundfarbe für Gruppe C */
+    color: black; /* Schwarzer Text für bessere Lesbarkeit */
+}
+/* Gruppe F */
+.group-f .card-number,
+.group-f .card-trivia {
+    background-color: purple; /* Lila Hintergrundfarbe für Gruppe F */
+    color: white; /* Weiße Schrift für bessere Lesbarkeit */
+}
+
+/* Gruppe G */
+.group-g .card-number,
+.group-g .card-trivia {
+    background-color: pink; /* Pinke Hintergrundfarbe für Gruppe G */
+    color: black; /* Schwarzer Text für bessere Lesbarkeit */
+}
+
+/* Gruppe H */
+.group-h .card-number,
+.group-h .card-trivia {
+    background-color:rgba(255, 125, 3, 0.874); /* Cyan Hintergrundfarbe für Gruppe H */
+    color: black; /* Schwarzer Text für bessere Lesbarkeit */
+}
+
+/* Gruppe E */
+.group-e .card-number,
+.group-e .card-trivia {
+    background-color: blue; /* Blaue Hintergrundfarbe für Gruppe E */
+}
+
+/* Styling für den "Wildtier-Quartett"-Button */
+#wildtier-btn {
+    position: relative;
+    display: inline-flex; /* Für das Ausrichten von Text und Pfeil */
+    align-items: center; /* Zentriert Text und Pfeil vertikal */
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    left: 0rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem; /* Schriftgröße anpassen */
+    color: black; /* Farbe des Textes */
+    font-family: "Roboto", sans-serif;
+    font-weight: regular;
+    cursor: pointer; /* Zeigt an, dass der Link klickbar ist */
+    gap: 0.5rem; /* Abstand zwischen Text und Pfeil */
+    padding: 0.5rem; /* Optional: Fügt etwas "Klickfläche" hinzu */
+    transition: transform 0.3s ease; 
+}
+
+#wildtier-btn .arrow {
+    font-size: 2.2rem; /* Größe des Pfeils */
+    font-weight: regular;
+    transition: transform 0.3s ease; /* Animation bei Hover */
+}
+
+#wildtier-btn:hover .arrow {
+    transform: translateX(5px); /* Bewegt den Pfeil bei Hover */
+}
+
+/* Styling für den "Hausaufgabe"-Button */
+#hausaufgabe-btn {
+    display: inline-flex; /* Für das Ausrichten von Text und Pfeil */
+    align-items: center; /* Zentriert Text und Pfeil vertikal */
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    position: relative; /* Ermöglicht relative Verschiebung */
+    left: 5rem; /* Verschiebt den Button nach rechts */
+    margin-top: 2rem; /* Abstand nach oben */
+    font-size: 1.5rem; /* Schriftgröße anpassen */
+    color: black; /* Farbe des Textes */
+    font-weight: regular;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer; /* Zeigt an, dass der Link klickbar ist */
+    gap: 0.5rem; /* Abstand zwischen Pfeil und Text */
+    padding: 0.5rem; /* Optional: Fügt etwas "Klickfläche" hinzu */
+    transition: transform 0.3s ease; 
+}
+
+#hausaufgabe-btn .arrow {
+    font-size: 2.2rem; /* Größe des Pfeils */
+    font-weight: regular;
+    transition: transform 0.3s ease; /* Animation bei Hover */
+    transform: rotate(180deg); /* Dreht den Pfeil nach links */
+}
+
+#hausaufgabe-btn:hover .arrow {
+    transform: rotate(180deg) translateX(-5px); /* Bewegt den Pfeil bei Hover */
+}
+.preview-image {
+    max-width: 25%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionaler Schatten */
+}/* Vorschaubereich */
+.preview-section {
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+/* Titel */
+.section-title {
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--dark-color);
+}
+
+/* Container für Bild und Text */
+.preview-container {
+    display: flex;
+    flex-direction: column; /* Elemente untereinander */
+    align-items: flex-start; /* Links ausrichten */
+    margin-left: 4rem; /* Gleicher Abstand wie der Titel */
+}
+
+/* Vorschau-Bild */
+.preview-image {
+    max-width: 12%; /* Bildgröße auf 25% der Containerbreite */
+    height: auto;
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionaler Schatten */
+    margin-bottom: 0rem; /* Abstand zum Text */
+}
+
+/* Text und Button */
+.preview-text {
+    display: flex;
+    flex-direction: row; /* Text und Pfeil nebeneinander */
+    align-items: center; /* Vertikale Zentrierung */
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+/* Abstand zwischen Text und Pfeil */
+#wildtier-text {
+    margin-right: 0.5rem;
+}
+
+#wildtier-btn {
+    cursor: pointer;
+    color: var(--dark-color);
+    transition: transform 0.3s ease;
+}
+
+#wildtier-btn:hover {
+    transform: translateX(5px); /* Pfeil verschiebt sich bei Hover */
+}
